@@ -1,0 +1,38 @@
+﻿<Window x:Class="WPFAppLibrary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAppLibrary"
+        mc:Ignorable="d"
+        Title="Главная" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            
+        </Grid.RowDefinitions>
+        <Border CornerRadius="0,20,20,0" Background="#FFD49688" Grid.RowSpan="2">
+            <StackPanel>
+                <StackPanel Margin="5,100">
+                    <Button Content="Книги" Height="40" Margin="5" x:Name="btBooks" Click="btBooks_Click"/>
+                    <Button Content="Читатели" Height="40" Margin="5" x:Name="btReaders" Click="btReaders_Click"/>
+                    <Button Content="Заявки на выдачу книг" Height="40" Margin="5" x:Name="btDistributingBooks" Click="btDistributingBooks_Click"/>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Bottom" Margin="5">
+                    <Button Content="Выход" Height="40"  Margin="5" x:Name="btExit" Click="btExit_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+        <Label x:Name="lbTitleBooks" Content="Книги" FontWeight="Bold" FontSize="24" Grid.Column="1" Margin="5"/>
+        <Label x:Name="lbTitleReaders" Visibility="Hidden" Content="Читатели" FontWeight="Bold" FontSize="24" Grid.Column="1" Margin="5"/>
+        <Label x:Name="lbTitleDistributingBooks" Visibility="Hidden" Content="Выдача книг" FontWeight="Bold" FontSize="24" Grid.Column="1" Margin="5"/>
+        <Frame x:Name="frReaders"  Source="PageReaders.xaml" Grid.Column="1" Grid.Row="1"/>
+        <Frame x:Name="frDistributingBooks" Source="PageDistributingBooks.xaml" Grid.Column="1" Grid.Row="1"/>
+        <Frame x:Name="frBooks" Source="PageBooks.xaml" Grid.Column="1" Grid.Row="1"/>
+    </Grid>
+</Window>

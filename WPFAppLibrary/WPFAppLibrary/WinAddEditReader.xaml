@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPFAppLibrary.WinAddEditReader"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAppLibrary"
+        mc:Ignorable="d"
+        Title="WinAddEditReader" Height="350" Width="500" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Content="Номер читательского билета" Margin="5"/>
+        <TextBox x:Name="tbReadersCardNumber" Grid.Column="1" Text="{Binding ReadersCardNumber}" Margin="5"/>
+        <Label Content="Фамилия" Grid.Row="1" Margin="5"/>
+        <TextBox x:Name="tbSurname" Grid.Column="1" Grid.Row="1" Text="{Binding Surname}" Margin="5"/>
+        <Label Content="Имя" Grid.Row="2" Margin="5"/>
+        <TextBox x:Name="tbName" Grid.Column="1" Grid.Row="2" Text="{Binding Name}" Margin="5"/>
+        <Label Content="Отчество" Grid.Row="3" Margin="5"/>
+        <TextBox x:Name="tbPatronymic" Grid.Column="1" Grid.Row="3" Text="{Binding Patronymic}" Margin="5"/>
+        <Button x:Name="btSave" Content="Сохранить" Margin="5" Grid.Column="1" Grid.Row="4" Click="btSave_Click"/>
+        <Button x:Name="btCancel" Content="Отменить" Margin="5" Grid.Row="4" Click="btCancel_Click"/>
+
+    </Grid>
+</Window>
